@@ -1,0 +1,17 @@
+{
+    "editor.quickSuggestions": {
+        "other": false,
+        "comments": false,
+        "strings": false
+    },
+    "editor.suggestOnTriggerCharacters": false,
+    "editor.acceptSuggestionOnEnter": "off",
+    "editor.tabCompletion": "off",
+    "editor.wordBasedSuggestions": "off",
+    "editor.parameterHints.enabled": false,
+    "editor.hover.enabled": false,
+    "editor.inlineSuggest.enabled": false,
+    "java.completion.enabled": false,
+    "editor.suggest.showWords": false,
+    "editor.suggest.showSnippets": false
+}
