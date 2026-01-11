@@ -1,3 +1,4 @@
+package solved;
 /*
     PROBLEM:
     Given a string s, return the length of the longest substring 

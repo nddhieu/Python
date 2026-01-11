@@ -1,3 +1,4 @@
+package solved;
 import java.util.*;
 
 public class SubarraySumEqualsK {
@@ -14,8 +15,23 @@ public class SubarraySumEqualsK {
      */
 
     public int subarraySum(int[] nums, int k) {
-        // TODO: Implement Prefix Sum + HashMap solution
-        return 0; // Placeholder return
+
+        if (nums == null || nums.length == 0)
+            return -1;
+        Map<Integer, Integer> prefixSumFrequencyMap = new HashMap<>();
+        int sum = 0;
+        int count = 0;
+        prefixSumFrequencyMap.put(0, 1);
+        for (int i = 0; i < nums.length; i++) {
+            sum += nums[i];
+
+            int sumPrefix = sum - k;
+            if (prefixSumFrequencyMap.containsKey(sumPrefix)) {
+                count += prefixSumFrequencyMap.get(sumPrefix);
+            }
+            prefixSumFrequencyMap.put(sum, prefixSumFrequencyMap.getOrDefault(sum, 0) + 1);
+        }
+        return count; // Placeholder return
     }
 
     public static void main(String[] args) {
