@@ -14,8 +14,17 @@ public class FirstUniqueCharacter {
      */
 
     public int firstUniqChar(String s) {
-        // TODO: Implement HashMap Counting solution
-        return -1; // Placeholder return
+        Map<Character, Integer> charAndFrequencyMap = new HashMap<>();
+        for (int i = 0; i < s.length(); i++) {
+            Character c = s.charAt(i);
+            charAndFrequencyMap.put(c, charAndFrequencyMap.getOrDefault(c, 0) + 1);
+        }
+        for (int i = 0; i < s.length(); i++) {
+            if (charAndFrequencyMap.get(s.charAt(i)) == 1) {
+                return i;
+            }
+        }
+        return -1;
     }
 
     public static void main(String[] args) {
